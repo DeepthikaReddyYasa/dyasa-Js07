@@ -44,8 +44,7 @@ document.getElementById("getFile").onchange = function() {
     }
 
     function wordCloud(sourceText) {
-        // Convert the source text to lowercase
-        // and remove leading and trailing whitespace
+        
         sourceText = sourceText.toLowerCase();
         sourceText = sourceText.trim();
 
@@ -65,8 +64,6 @@ document.getElementById("getFile").onchange = function() {
         // Sort the words in alphabetical order
         words.sort();
 
-        // Create a 2D array in which each item is an array
-        // Containing a word and its duplicate count
         let unique = [ [words[0], 1] ];
 
         // Keep an index of the unique words
@@ -94,7 +91,7 @@ document.getElementById("getFile").onchange = function() {
 
         // Find the duplicates of the most-repeated word
         let maxCount = unique[0][1];
-        // Sort the word list in alphabetical order
+    
         unique.sort();
 
         // Reference the word cloud box
