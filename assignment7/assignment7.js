@@ -58,17 +58,28 @@ document.addEventListener("DOMContentLoaded", function () {
     addButton.addEventListener("click", function () {
       const name = nameInput.value.trim().toLowerCase();
       const email = emailInput.value.trim().toLowerCase();
+      if (name== "") {
+        alert("Name is not provided")
+        //messageElement.textContent = "Name should be at least 2 characters long.";
+        return;
+      }
   
       if (name.length < 2) {
-        messageElement.textContent = "Name should be at least 2 characters long.";
+        alert("Name should be at least 2 characters long.")
+        //messageElement.textContent = "Name should be at least 2 characters long.";
         return;
       }
-  
+      if (email=="") {
+        alert("No email provided")
+        //messageElement.textContent = "Email should include @.";
+        return;
+      }
       if (email.indexOf("@") === -1) {
-        messageElement.textContent = "Email should include @.";
+        alert("Email should include @.")
+        //messageElement.textContent = "Email should include @.";
         return;
       }
-  
+      
       messageElement.textContent = "";
   
       // Create a new row in the table for the name and email
